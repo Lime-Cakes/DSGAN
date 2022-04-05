@@ -24,7 +24,7 @@ from miscc.choose_dataset import choose_dataset
 from miscc.config import cfg, cfg_from_file, _merge_a_into_b
 from miscc.utils import mkdir_p, find_latest_model_file, cfg_args_exchange,\
         parse_args
-from FID.fid_score import fid_scores
+#from FID.fid_score import fid_scores
 
 
 
@@ -146,9 +146,11 @@ if __name__ == "__main__":
                 cfg.NET_G = net_G_name
                 algo.sample(dataloader, eval_name='eval',
                         eval_num=args.eval_num)
-                fid_score_now = \
-                    fid_scores(output_dir, cfg, sample_num=args.sample_num, 
-                    gen_images_path=args.gen_paths, loop=True)
+                #fid_score_now = \
+                    #fid_scores(output_dir, cfg, sample_num=args.sample_num, 
+                    #gen_images_path=args.gen_paths, loop=True)
+                fid_score_now=0
+                print("error")
 
                 f.write('%s, %s, %.4f\n' % (date_str, net_G_name, fid_score_now))
 
