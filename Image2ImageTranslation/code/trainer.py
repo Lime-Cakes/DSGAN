@@ -111,7 +111,7 @@ class GANTrainer(object):
         if cfg.L1_LOSS: l1_criterion = nn.L1Loss();
         # Possible VGG Loss
         if cfg.VGG_LOSS:
-            from exterior_models.pix2pixHD.networks import VGG_LOSS
+            from exterior_models.pix2pixHD.networks import VGGLoss
             self.criterionVGG = VGGLoss()
 
         lr_decay_value = cfg.TRAIN.LR_DECAY_VALUE
