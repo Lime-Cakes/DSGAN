@@ -326,7 +326,7 @@ def compute_gan_loss(real_digits, fake_digits, loss_type=None,
         elif loss_at == 'G':
             errG = gan_cri(fake_digits, True)
             if cfg.D_TYPE == 'DIS_HD':
-                errG_feat = compute_digits_differnce(real_digits, fake_digits, 
+                errG_feat = compute_digits_difference(real_digits, fake_digits, 
                         weight=10.0)
 
     elif loss_type == 'HINGE':
