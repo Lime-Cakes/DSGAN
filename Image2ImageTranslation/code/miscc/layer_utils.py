@@ -11,7 +11,7 @@ class Piling(nn.Module):
     """
     def __init__(self, target_size):
         super(Piling, self).__init__()
-        self.target_size = target_size.astype(int)
+        self.target_size = [int(a) for a in target_size]
 
     def forward(self, input_var):
         input_size = input_var.size() 
