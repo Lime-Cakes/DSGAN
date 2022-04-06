@@ -27,3 +27,6 @@ def choose_dataset(dataset_name):
     elif dataset_name == 'facades':
         from .datasets_facades import Dataset
         return Dataset
+    elif dataset_name == 'custom':
+        from .dataset_custom import Dataset
+        return Dataset
